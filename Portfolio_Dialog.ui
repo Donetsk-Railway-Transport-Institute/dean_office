@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Potfolio_Dialog</class>
+ <widget class="QDialog" name="Potfolio_Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>877</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="inputMethodHints">
+   <set>Qt::ImhNone</set>
+  </property>
+  <widget class="QLabel" name="label_foto">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>100</y>
+     <width>95</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>Фото</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_dean">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>90</y>
+     <width>521</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Факультет:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_prog">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>110</y>
+     <width>521</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Программа:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_specialty">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>521</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Специальность:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_specialization">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>150</y>
+     <width>521</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Специализация:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_portfolio_name">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>220</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>ПОРТФОЛИО СТУДЕНТА</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_form">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>250</y>
+     <width>331</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>(форма обучения:      )</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_group">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>521</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Группа:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>290</y>
+     <width>411</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ФИО</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name_engl">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>310</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ФИО (англ.)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name_born">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>330</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Дата рождения</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name_prikaz">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>350</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Зачислен (ный/на) приказом от:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_save">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>570</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cancel">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>600</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Отмена</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pdf">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>630</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PDF</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_institut">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>0</y>
+     <width>741</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>ГОСУДАРСТВЕННАЯ ОБРАЗОВАТЕЛЬНАЯ ОРГАНИЗАЦИЯ ВЫСШЕГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ &quot;ДОНЕЦКИЙ ИНСТИТУТ ЖЕЛЕЗНОДОРОЖНОГО ТРАНСПОРТА&quot;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name_engl">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>310</y>
+     <width>481</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name_born">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>330</y>
+     <width>481</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name_prikaz">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>350</y>
+     <width>481</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_table_head">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>380</y>
+     <width>651</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Перевод с курса на курс, перерыв в академическом отпуске, поощрения, взыскания</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="table_perewod">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>400</y>
+     <width>651</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <attribute name="horizontalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>215</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Курс</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Номер и дата приказа</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Содержание приказа</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label_add_data">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>550</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Дополнительные сведения:</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_add_data">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>570</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_kontakts">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>550</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Контактная информация:</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_kontakts">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>570</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_prev_edu">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>630</y>
+     <width>161</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Предыдущее образование</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_edu">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>630</y>
+     <width>161</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Учебная деятельность</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_other">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>630</y>
+     <width>161</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Другие виды деятельности</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cam">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>240</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Фото</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_budget_contract">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>190</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Обучается за счет средств</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>190</y>
+     <width>501</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_code">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>290</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Шифр</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name_code">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>290</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

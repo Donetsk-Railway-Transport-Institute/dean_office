@@ -1,0 +1,70 @@
+#include <QApplication>
+#include <QtCore/QTranslator>
+#include <QtCore/QLibraryInfo>
+#include <QtCore/QFile>
+#include <QtCore/QTextStream>
+#include <QStyleFactory>
+#include <QResource>
+
+#include "deanofficewindow.h"
+
+void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+{
+    Q_UNUSED(context);
+    QString sCurrDateTime="["+QDateTime::currentDateTime().toString("dd.MM.yy hh:mm:ss")+"]";
+    QString log_name = "dean_office_"+QDateTime::currentDateTime().toString("dd.MM.yy")+".log";
+    QFile fMessFile(qApp->applicationDirPath() + "/log/"+log_name);
+    if(!fMessFile.open(QIODevice::Append | QIODevice::Text)) return;
+    QTextStream tsTextStream(&fMessFile);
+    tsTextStream.setCodec("UTF-8");
+    switch (type) {
+        case QtDebugMsg:
+            tsTextStream << QString("%1 Debug: %2\n").arg(sCurrDateTime).arg(msg);
+            break;
+        case QtInfoMsg:
+            tsTextStream << QString("%1 Info: %2\n").arg(sCurrDateTime).arg(msg);
+            break;
+        case QtWarningMsg:
+            tsTextStream << QString("%1 Warning: %2\n").arg(sCurrDateTime).arg(msg);
+            break;
+        case QtCriticalMsg:
+            tsTextStream << QString("%1 Critical: %2\n").arg(sCurrDateTime).arg(msg);
+            break;
+        case QtFatalMsg: {
+            tsTextStream << QString("%1 Fatal: %2\n").arg(sCurrDateTime).arg(msg);
+            tsTextStream.flush();
+            fMessFile.flush();
+            fMessFile.close();
+            exit(-1);
+        }
+    }
+    tsTextStream.flush();
+    fMessFile.flush();
+    fMessFile.close();
+}
+
+int main(int argc, char *argv[])
+{
+    Q_INIT_RESOURCE(edit_report);
+    qInstallMessageHandler(myMessageOutput);
+    int result = -1;
+    do {
+
+        //рендеринг экрана
+        QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+        QApplication::setStyle(QStyleFactory::create("Fusion")); // these lines before the next
+
+        QApplication a(argc, argv);
+        QTranslator qtTranslator;
+        qtTranslator.load("qt_ru",QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+        a.installTranslator(&qtTranslator);
+
+        DeanOfficeWindow w;
+        w.show();
+        result = a.exec();
+        if(result==DeanOfficeWindow::EXIT_CODE_REBOOT)
+            qInfo("Application rebooted after change curr year.");
+        else qInfo("Application exit. Return code = %d.",result);
+    }while(result==DeanOfficeWindow::EXIT_CODE_REBOOT);
+    return result;
+}
