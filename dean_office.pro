@@ -105,10 +105,12 @@ CONFIG(debug, debug|release) {
     FILE_TO = $${PWD}/bin/debug/$${TARGET}.exe
 }
 
+RELEASE_DIR = D:/EDIT/Qt/dean_office_data
+
 CONFIG(release, debug|release) {
     DESTDIR = $${PWD}/build/release
     FILE_FROM = $${DESTDIR}/$${TARGET}.exe
-    FILE_TO = $${PWD}/bin/release/$${TARGET}.exe
+    FILE_TO = $${RELEASE_DIR}/$${TARGET}.exe
 }
 
 win32{
